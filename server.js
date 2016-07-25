@@ -3,6 +3,7 @@ var swig = require('swig');
 var bodyParser = require('body-parser');
 
 var app = express();
+app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/bower_components'));
 
@@ -16,6 +17,6 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 app.use('/', routes);
 
-app.listen(3000, function() {
-  console.log('Server started on port 3000.');
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
