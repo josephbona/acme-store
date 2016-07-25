@@ -1,4 +1,4 @@
-{% set parentpage = { title: "Admin", url: "http://localhost:3000/admin"} %}
+{% set parentpage = { title: "Admin", url: "./admin"} %}
 {% extends "layout.html" %} {% block content %}
   <h2 class="page-title">{{title}}</h2>
   <form action="/products" method="post">
