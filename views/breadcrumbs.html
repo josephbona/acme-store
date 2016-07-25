@@ -1,0 +1,10 @@
+<ol class="breadcrumb">
+  <li><a href="http://localhost:3000/">Home</a></li>
+  {% if parentpage %}
+    <li><a href="{{parentpage.url}}">{{parentpage.title}}</a></li>
+  {% endif %}
+  <li class="active">{{title}}</li>
+</ol>
+{% if parentpage %}
+<a href="{{parentpage.url}}" class="btn btn-primary btn-block btn-back">Back To {{parentpage.title}}</a>
+{% endif %}

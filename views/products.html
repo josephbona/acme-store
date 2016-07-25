@@ -1,0 +1,19 @@
+{% set currentpage = 'products' %}
+{% extends "layout.html" %} {% block content %}
+{% for product in products %}
+  {% if loop.first %}<div class="row archive">{% endif %}
+    <div class="col-sm-4 col-xs-6">
+      <div class="product">
+          <div class="photo">
+            <img src="{{product.image}}" />
+            <h4><span class="label">${{product.price}}</span></h4>
+          </div>
+          <div class="info" data-mh="product">
+            <h4>{{product.name}}</h4>
+          </div>
+          <a href="http://localhost:3000/product/{{product.id}}" class="btn btn-block btn-primary btn-sm">View Product</a>
+      </div>
+    </div>
+  {% if loop.last %}</div>{% endif %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,37 @@
+{% set parentpage = { title: "Products", url: "http://localhost:3000/products"} %}
+{% extends "layout.html" %} {% block content %}
+{% for product in products %}
+<div class="row single">
+	<div class="col-sm-5">
+		<img src="{{product.image}}" class="active img-thumbnail img-responsive">
+    <div class="row thumbnails">
+      <div class="col-xs-4">
+        <img src="{{product.image}}" class="img-thumbnail img-responsive">
+      </div>
+      <div class="col-xs-4">
+        <img src="{{product.image}}" class="img-thumbnail img-responsive">
+      </div>
+      <div class="col-xs-4">
+        <img src="{{product.image}}" class="img-thumbnail img-responsive">
+      </div>
+    </div>
+	</div>
+	<div class="col-sm-7">
+		<h3 class="page-title">{{product.name}}</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis. Sed blandit augue vitae augue scelerisque bibendum. Vivamus sit amet libero turpis, non venenatis urna. In blandit, odio convallis suscipit venenatis, ante ipsum cursus augue.</p>
+    <div class="row">
+      <div class="col-xs-6">
+        <p>Item ID: <span class="label label-primary">ACME-00{{product.id}}</span></p>
+      </div>
+      <div class="col-xs-6">
+        <p>Price: <strong>${{product.price}}</strong></p>
+      </div>
+    </div>
+		<p class="cart">
+      <input type="number" value="1" class="form-control">
+      <a href="#!" class="btn btn-primary">Add To Cart</a>
+    </p>
+	</div>
+</div>
+{% endfor %}
+{% endblock %}
