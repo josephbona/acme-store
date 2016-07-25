@@ -10,7 +10,7 @@
     <title>Acme Company Store</title>
 
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://localhost:3000/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,13 +27,13 @@
         <nav>
           <ul class="nav nav-pills">
             <li role="presentation" {% if currentpage == 'home' %}class="active"{% endif %}>
-              <a href="http://localhost:3000/">Home</a>
+              <a href="./">Home</a>
             </li>
             <li {% if currentpage == 'products' %}class="active"{% endif %}>
-              <a href="http://localhost:3000/products">Products</a>
+              <a href="./products">Products</a>
             </li>
             <li {% if currentpage == 'admin' %}class="active"{% endif %}>
-              <a href="http://localhost:3000/admin">Admin</a>
+              <a href="./admin">Admin</a>
             </li>
           </ul>
         </nav>
@@ -45,8 +45,8 @@
       </footer>
 
     </div> <!-- /container -->
-    <script src="http://localhost:3000/jquery/dist/jquery.min.js"></script>
+    <script src="jquery/dist/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="http://localhost:3000/matchHeight/dist/jquery.matchHeight-min.js"></script>
+    <script src="matchHeight/dist/jquery.matchHeight-min.js"></script>
   </body>
 </html>
