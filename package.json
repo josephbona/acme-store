@@ -1,13 +1,13 @@
 {
   "name": "acme-products",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fictional store using express",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Joseph Bona",
   "license": "ISC",
   "dependencies": {
     "Faker": "^0.7.2",
