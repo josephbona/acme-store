@@ -39,7 +39,7 @@ for (var i = 0; i < 9; i++) {
     faker.commerce.productName(),
     faker.commerce.price(),
     ((i < 3) ? true : false),
-    '//placehold.it/400x400'
+    'http://placehold.it/400x400'
    );
 }
 console.log(data);
