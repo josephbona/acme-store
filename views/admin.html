@@ -20,9 +20,12 @@
           </a>
         </td>
         <td class="col-sm-2">
-        <a href="http://localhost:3000/product/{{product.id}}/delete" class="btn btn-danger btn-block btn-sm">
-            <span class="glyphicon glyphicon-remove"></span> Delete
-        </a></td>
+          <form action="/product/{{product.id}}?_method=DELETE" method="post">
+            <button type="submit" class="btn btn-danger btn-block btn-sm">
+              <span class="glyphicon glyphicon-remove"></span> Delete
+            </button>
+          </form>
+        </td>
     </tr>
     {% endfor %}
   </tbody>

@@ -7,19 +7,25 @@ function add (id, name, price, featured, image) {
 }
 
 function update (id, name, price, featured, image) {
-  this.id = id;
-  this.name = name;
-  this.price = price;
-  this.featued = featured;
-  this.image = image;
+  var toUpdate = this.getData().filter(function(item) {
+    return item.id === id;
+  })[0];
+  var idx = this.getData().indexOf(toUpdate);
+  this.getData()[idx].name = name;
+  this.getData()[idx].price = price;
+  this.getData()[idx].image = image;
 }
 
-function remove (el) {
-  data = _.without(data, el);
+function getData() {
+  return data;
 }
 
-function list () {
-  return _.cloneDeep(data);
+function deleteItem (id) {
+  var toDelete = this.getData().filter(function(item) {
+    return item.id === id;
+  })[0];
+  var idx = this.getData().indexOf(toDelete);
+  this.getData().splice(idx, 1);
 }
 
 function find (properties) {
@@ -30,7 +36,7 @@ function lastID () {
   return _.last(data).id;
 }
 
-module.exports = { add: add, list: list, find: find, update: update, remove: remove, lastID: lastID };
+module.exports = { add: add, find: find, getData: getData, update: update, deleteItem: deleteItem, lastID: lastID };
 
 // generate some products
 for (var i = 0; i < 9; i++) {
@@ -42,4 +48,3 @@ for (var i = 0; i < 9; i++) {
     'http://placehold.it/400x400'
    );
 }
-console.log(data);

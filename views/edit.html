@@ -2,7 +2,7 @@
 {% extends "layout.html" %} {% block content %}
   {% for product in products %}
   <h2 class="page-title">{{title}} <small>{{product.name}}</small></h2>
-  <form action="/products" method="post">
+  <form action="/product/{{product.id}}?_method=PUT" method="post">
     <div class="form-group">
       <label for="name">Name:</label>
       <input name="name" id="name" type="text" class="form-control" value="{{product.name}}">
