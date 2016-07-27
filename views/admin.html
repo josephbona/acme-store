@@ -12,15 +12,15 @@
     {% for product in products %}
     <tr>
         <td class="col-sm-8">
-          <h4><a href="http://localhost:3000/product/{{product.id}}">{{product.name}}</a></h4>
+          <h4><a href="/products/{{product.id}}">{{product.name}}</a></h4>
         </td>
         <td class="col-sm-2">
-          <a href="http://localhost:3000/product/{{product.id}}/edit" class="btn btn-info btn-block btn-sm">
+          <a href="/products/{{product.id}}/edit" class="btn btn-info btn-block btn-sm">
               <span class="glyphicon glyphicon-edit"></span> Edit
           </a>
         </td>
         <td class="col-sm-2">
-          <form action="/product/{{product.id}}?_method=DELETE" method="post">
+          <form action="/products/{{product.id}}?_method=DELETE" method="post">
             <button type="submit" class="btn btn-danger btn-block btn-sm">
               <span class="glyphicon glyphicon-remove"></span> Delete
             </button>

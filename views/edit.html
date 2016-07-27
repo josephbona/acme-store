@@ -1,8 +1,7 @@
 {% set parentpage = { title: "Admin", url: "http://localhost:3000/admin"} %}
 {% extends "layout.html" %} {% block content %}
-  {% for product in products %}
   <h2 class="page-title">{{title}} <small>{{product.name}}</small></h2>
-  <form action="/product/{{product.id}}?_method=PUT" method="post">
+  <form action="/products/{{product.id}}?_method=PUT" method="post">
     <div class="form-group">
       <label for="name">Name:</label>
       <input name="name" id="name" type="text" class="form-control" value="{{product.name}}">
@@ -20,5 +19,4 @@
     <input type="hidden" name="method" value="put">
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-  {% endfor %}
 {% endblock %}

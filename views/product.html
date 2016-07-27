@@ -1,6 +1,5 @@
 {% set parentpage = { title: "Products", url: "http://localhost:3000/products"} %}
 {% extends "layout.html" %} {% block content %}
-{% for product in products %}
 <div class="row single">
 	<div class="col-sm-5">
 		<img src="{{product.image}}" class="active img-thumbnail img-responsive">
@@ -33,5 +32,4 @@
     </p>
 	</div>
 </div>
-{% endfor %}
 {% endblock %}
